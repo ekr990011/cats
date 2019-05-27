@@ -1,0 +1,39 @@
+<div class="article" data-controller="accordian">
+  <h2><%= @cat.title %></h2>
+  <div class=""><%= @cat.short_description %></div>
+  <div class="article__article_header">
+    <button class="article__button btn" type="button" name="article_button"
+      data-target="accordian.article_header" data-action="click->accordian#expandShrinkArticle"
+    >
+      <h3>Click for full Description</h3>
+    </button>
+  </div>
+  <div data-target="accordian.article" class="article__article">
+    <%= @cat.article %>
+  </div>
+  <div class="article__meta">
+    <button class="youtube__button btn" type="button" name="youtube_button"
+      data-target="accordian.youtube_header" data-action="click->accordian#expandShrinkYoutube"
+    >
+      <h4>Show Videos</h4>
+    </button>
+    <button class="socialrank__button btn" type="button" name="socialrank_button"
+      data-target="accordian.socialrank_header" data-action="click->accordian#expandShrinkSocialrank"
+    >
+      <h4>Show Rank</h4>
+    </button>
+
+  </div>
+  <div data-target="accordian.first_video" class="videoWrapper first_video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/njIpFb15Sng"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div data-target="accordian.youtube" class="article__youtube">
+
+  </div>
+  <div data-target="accordian.socialrank" class="article__socialrank">
+
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<%= form_for(@cat) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+
+    <%= form.label :thumbnail %>
+    <%= form.text_field :thumbnail %>
+
+    <%= form.label :short_description %>
+    <%= form.text_area :short_description %>
+
+    <%= form.label :article %>
+    <%= form.rich_text_area :article %>
+
+    <%= form.submit %>
+  </div>
+<% end %>
