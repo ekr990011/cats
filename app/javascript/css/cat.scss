@@ -15,10 +15,17 @@
   margin-top: 15px;
   padding: 10px;
   border-radius: 20px;
+  // column-width: 25em;
+  // column-gap: 5em;
 
   div {
     line-height: 1.8;
   }
+}
+
+.cols {
+  column-width: 25em;
+  column-gap: 5em;
 }
 
 .article__article_header {
