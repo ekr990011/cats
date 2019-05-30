@@ -1,0 +1,2 @@
+class CatCount < ApplicationRecord
+end
