@@ -1,6 +1,6 @@
 <div class="article" data-controller="accordian">
   <h2><%= @cat.title %></h2>
-  <div class=""><%= @cat.short_description %></div>
+  <div class="article__short_description"><%= @cat.short_description %></div>
   <div class="article__article_header">
     <button class="article__button btn" type="button" name="article_button"
       data-target="accordian.article_header" data-action="click->accordian#expandShrinkArticle"
@@ -25,13 +25,20 @@
 
   </div>
   <div data-target="accordian.first_video" class="videoWrapper first_video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/njIpFb15Sng"
+    <iframe width="560" height="315" src="<%= @video_prefix + @first_video.video_id %>"
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
   </div>
   <div data-target="accordian.youtube" class="article__youtube">
-
+    <% @videos.each do |video| %>
+      <div class="videoWrapper cat_videos">
+        <iframe width="560" height="315" src="<%= @video_prefix + video.video_id %>"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    <% end %>
   </div>
   <div data-target="accordian.socialrank" class="article__socialrank">
 

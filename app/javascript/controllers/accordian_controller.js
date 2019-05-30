@@ -47,6 +47,7 @@ export default class extends Controller {
     if(socialrank.style.display !== "block") {
       socialrank.style.display = "block"
       this.first_videoTarget.style.display = "none"
+      this.youtubeTarget.style.display = ""
       this.socialrank_headerTarget.firstElementChild.textContent = "Hide Rank"
     } else {
       socialrank.style.display = ""
