@@ -24,22 +24,26 @@
     </button>
 
   </div>
-  <div data-target="accordian.first_video" class="videoWrapper first_video">
-    <iframe width="560" height="315" src="<%= @video_prefix + @first_video.video_id %>"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-  </div>
-  <div data-target="accordian.youtube" class="article__youtube">
-    <% @videos.each do |video| %>
-      <div class="videoWrapper cat_videos">
-        <iframe width="560" height="315" src="<%= @video_prefix + video.video_id %>"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    <% end %>
-  </div>
+
+  <% if @video && @videos %>
+    <div data-target="accordian.first_video" class="videoWrapper first_video">
+      <iframe width="560" height="315" src="<%= @video_prefix + @first_video.video_id %>"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div data-target="accordian.youtube" class="article__youtube">
+      <% @videos.each do |video| %>
+        <div class="videoWrapper cat_videos">
+          <iframe width="560" height="315" src="<%= @video_prefix + video.video_id %>"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  
   <div data-target="accordian.socialrank" class="article__socialrank">
 
   </div>
