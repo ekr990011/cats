@@ -25,7 +25,8 @@ class CatsController < ApplicationController
   end
 
   def update
-    cat = Cat.update(cat_params)
+    cat = Cat.find_by_id(params[:id])
+    cat.update(cat_params)
     redirect_to cat
   end
 
