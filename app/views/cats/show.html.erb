@@ -1,6 +1,8 @@
 <div class="article" data-controller="accordian">
-  <h2><%= @cat.title %></h2>
-  <div class="article__short_description"><%= @cat.short_description %></div>
+  <div class="article__top">
+    <h2><%= @cat.title %></h2>
+    <div class="article__short_description"><%= @cat.short_description %></div>
+  </div>
   <div class="article__article_header">
     <button class="article__button btn" type="button" name="article_button"
       data-target="accordian.article_header" data-action="click->accordian#expandShrinkArticle"
@@ -26,18 +28,23 @@
   </div>
 
   <% if @first_video && @videos %>
-    <div data-target="accordian.first_video" class="videoWrapper first_video">
-      <iframe src="<%= @video_prefix + @first_video.video_id %>"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <div data-target="accordian.youtube" class="article__youtube">
-      <% @videos.each do |video| %>
-        <div class="cat_videos">
-          <img src="<%= "http://img.youtube.com/vi/" + video.video_id + "/default.jpg" %>" />
-        </div>
-      <% end %>
+    <div class="youtube">
+      <div data-target="accordian.first_video" class="videoWrapper first_video">
+        <iframe src="<%= @video_prefix + @first_video.video_id %>"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div data-target="accordian.youtube" class="article__youtube">
+        <h5>More Interesting Videos about the <%= @cat.title %> !</h5>
+        <% @videos.each do |video| %>
+          <div class="cat_videos">
+            <a target="_blank" href="<%= "https://www.youtube.com/watch?v=" + video.video_id %>">
+              <img alt="<%= video.video_id %>" src="<%= "http://img.youtube.com/vi/" + video.video_id + "/default.jpg" %>" />
+            </a>
+          </div>
+        <% end %>
+      </div>
     </div>
   <% end %>
 
