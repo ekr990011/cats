@@ -21,11 +21,12 @@ class CatsController < ApplicationController
   end
 
   def edit
-
+    @cat = Cat.find_by_id(params[:id])
   end
 
   def update
-
+    cat = Cat.update(cat_params)
+    redirect_to cat
   end
 
 
