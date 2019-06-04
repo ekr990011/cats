@@ -32,8 +32,8 @@ export default class extends Controller {
   expandShrinkYoutube() {
     const youtube = this.youtubeTarget
 
-    if(youtube.style.display !== "block") {
-      youtube.style.display = "block"
+    if(youtube.style.display !== "flex") {
+      youtube.style.display = "flex"
       this.youtube_headerTarget.firstElementChild.textContent = "Hide Videos"
     } else {
       youtube.style.display = ""

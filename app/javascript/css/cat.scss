@@ -3,13 +3,14 @@
   flex-direction: column;
   margin-left: 5px;
   margin-right: 5px;
+  max-width: 32em;
   align-self: center;
   font-size: 1.1em;
 }
 
 .article__short_description {
   align-self: center;
-  max-width: 32em;
+  // max-width: 32em;
 }
 
 .article__article {
@@ -17,7 +18,7 @@
   display: none;
   background-color: #fff1ff;
   margin-top: 15px;
-  max-width: 32em;
+  // max-width: 32em;
   padding: 10px;
   border-radius: 20px;
   // column-width: 25em;
@@ -67,15 +68,17 @@
 }
 
 .article__youtube {
+  // flex-grow: 0.5;
   display: none;
-  // flex-flow: row wrap;
-  // justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .cat_videos {
-  // flex: 1;
+  // flex-grow: 0.5;
   margin-bottom: 13px;
-  // width: 16em;
+  // width: 50%;
+  // height: 50%
 }
 
 .first_video {
