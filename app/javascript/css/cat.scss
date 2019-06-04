@@ -3,14 +3,14 @@
   flex-direction: column;
   margin-left: 5px;
   margin-right: 5px;
-  max-width: 32em;
+  // max-width: 32em;
   align-self: center;
-  font-size: 1.1em;
+  font-size: 27px;
 }
 
 .article__short_description {
   align-self: center;
-  // max-width: 32em;
+  max-width: 32em;
 }
 
 .article__article {
@@ -18,7 +18,7 @@
   display: none;
   background-color: #fff1ff;
   margin-top: 15px;
-  // max-width: 32em;
+  max-width: 32em;
   padding: 10px;
   border-radius: 20px;
   // column-width: 25em;
