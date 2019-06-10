@@ -38,12 +38,12 @@
       <div data-target="accordian.youtube" class="article__youtube">
         <h5>More Interesting Videos about the <%= @cat.title %> !</h5>
         <% @videos.each do |video| %>
-        <div class="cat_videos">
-          <iframe src="<%= @video_prefix + video.video_id %>"
-            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+          <div class="cat_videos">
+            <iframe src="<%= @video_prefix + video.video_id %>"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         <% end %>
       </div>
     </div>
