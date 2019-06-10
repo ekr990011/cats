@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :image, :article)
+    params.require(:article).permit(:title, :image, :article_body)
   end
 
   def js_css
