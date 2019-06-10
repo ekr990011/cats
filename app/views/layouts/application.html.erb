@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cats</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_pack_tag 'application', async: true %>
+    <%= javascript_pack_tag 'application', async: true %>
+
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <%= yield %>
+  </body>
+</html>

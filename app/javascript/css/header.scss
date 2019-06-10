@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.links {
+  background-color: blue;
+  margin-right: 10px;
+}

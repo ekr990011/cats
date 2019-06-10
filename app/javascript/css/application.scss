@@ -1,0 +1,56 @@
+@import 'normalize.css';
+@import 'header.scss';
+@import 'cat.scss';
+
+// font-family: 'Source Sans Pro', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+html body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+}
+
+.btn {
+  /* default for <button>, but useful for <a> */
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 2px 0;
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 4px;
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  &:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+  &:hover,
+  &:focus {
+    border-color: currentColor;
+    background-color: white;
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  display: block;
+  // height: 0;
+  padding: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
