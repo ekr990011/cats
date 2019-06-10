@@ -1,0 +1,30 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 32em;
+  align-self: center;
+  font-size: 27px;
+}
+
+.article__top {
+  background-color: #feffcf;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.article__article {
+  align-self: center;
+  background-color: #fff1ff;
+  margin-top: 15px;
+  // max-width: 32em;
+  padding: 10px;
+  border-radius: 20px;
+  column-width: 25em;
+  column-gap: 5em;
+
+  div {
+    line-height: 1.8;
+  }
+}

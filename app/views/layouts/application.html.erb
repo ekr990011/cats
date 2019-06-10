@@ -9,6 +9,11 @@
     <%= stylesheet_pack_tag 'application', async: true %>
     <%= javascript_pack_tag 'application', async: true %>
 
+    <% if @js_css %>
+      <%= stylesheet_pack_tag @js_css[:css], async: true %>
+      <%= javascript_pack_tag @js_css[:js], async: true %>
+    <% end %>
+
   </head>
 
   <body>

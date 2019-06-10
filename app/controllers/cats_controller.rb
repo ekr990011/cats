@@ -1,4 +1,5 @@
 class CatsController < ApplicationController
+  before_action :js_css
 
   def index
 
@@ -35,6 +36,10 @@ class CatsController < ApplicationController
 
   def cat_params
     params.require(:cat).permit(:title, :image, :short_description, :article)
+  end
+
+  def js_css
+    @js_css = {css: "cat", js: "cat"}
   end
 
 end
