@@ -1,6 +1,9 @@
 <div class="article" data-controller="accordian">
   <div class="article__top">
-    <h2><%= @cat.title %></h2>
+    <div class="cat__header">
+      <%= image_pack_tag 'media/images/cats/' + @cat.image %>
+      <h2><%= @cat.title %></h2>
+    </div>
     <div class="article__short_description"><%= @cat.short_description %></div>
   </div>
   <div class="article__article_header">

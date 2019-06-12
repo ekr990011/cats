@@ -19,5 +19,9 @@ require("channels")
 require("trix")
 require("@rails/actiontext")
 
+// top of packs/application.js
+// const importAll = (r) => r.keys().map(r)
+// importAll(require.context('../images/cats', false, /\.(png|jpe?g|svg)$/));
+
 import 'css/application'
 import "controllers"

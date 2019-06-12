@@ -128,3 +128,25 @@
     cursor: pointer;
   }
 }
+
+.cat__header {
+  position: relative;
+  display: block;
+  // height: 0;
+  padding: 0;
+  // padding-bottom: 56.25%;
+  // overflow: hidden;
+  text-align: center;
+
+  img {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // height: 100%;
+    // width: 100%;
+    // border: 0;
+    max-width: 100%;
+    height: auto;
+  }
+}
