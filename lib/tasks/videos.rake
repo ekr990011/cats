@@ -8,7 +8,7 @@ namespace :cats do
 
     a = Mechanize.new
     a.user_agent_alias = 'Mac Safari 4'
-    page = a.get('https://www.google.com.mx/videohp?hl=en')
+    page = a.get('https://www.google.com/videohp?hl=en')
 
     search_form = page.form_with name: "f"
     search_form.field_with(name: "q").value = cat.title
@@ -49,7 +49,7 @@ namespace :cats do
       page = a.get('https://www.google.com.mx/videohp?hl=en')
 
       search_form = page.form_with name: "f"
-      search_form.field_with(name: "q").value = cat.title
+      search_form.field_with(name: "q").value = cat.title.sub(": Facts & Trivia", "")
       search_results = a.submit search_form
 
 

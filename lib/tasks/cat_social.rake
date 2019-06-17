@@ -1,32 +1,32 @@
 namespace :cats do
   task videos: :environment do
-    require 'capybara'
-    require 'capybara/dsl'
-
-    class Trends
-      include Capybara::DSL
-      
-      def initialize
-        Capybara.register_driver :chrome do |app|
-          Capybara::Selenium::Driver.new(app, browser: :chrome)
-        end
-
-        Capybara.register_driver :headless_chrome do |app|
-          capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-            chromeOptions: {
-              args: %w[headless enable-features=NetworkService,NetworkServiceInProcess]
-            }
-          )
-
-          Capybara::Selenium::Driver.new app,
-            browser: :chrome,
-            desired_capabilities: capabilities
-        end
-
-        Capybara.default_driver = :headless_chrome
-        Capybara.javascript_driver = :headless_chrome
-      end
-    end
+    # require 'capybara'
+    # require 'capybara/dsl'
+    #
+    # class Trends
+    #   include Capybara::DSL
+    #
+    #   def initialize
+    #     Capybara.register_driver :chrome do |app|
+    #       Capybara::Selenium::Driver.new(app, browser: :chrome)
+    #     end
+    #
+    #     Capybara.register_driver :headless_chrome do |app|
+    #       capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    #         chromeOptions: {
+    #           args: %w[headless enable-features=NetworkService,NetworkServiceInProcess]
+    #         }
+    #       )
+    #
+    #       Capybara::Selenium::Driver.new app,
+    #         browser: :chrome,
+    #         desired_capabilities: capabilities
+    #     end
+    #
+    #     Capybara.default_driver = :headless_chrome
+    #     Capybara.javascript_driver = :headless_chrome
+    #   end
+    # end
 
     # require 'mechanize'
     # a = Mechanize.new
@@ -47,6 +47,14 @@ namespace :cats do
     # array = csv.body.split(",")
     #
     # puts array
+
+
+Cat.all.each do |x|
+ puts x.title
+ puts x.social
+ social = gets
+ x.update(social: "/m/" + social.chomp) unless social == "\n"
+ end
 
 
     a = Capybara.visit("https://trends.google.com/trends/explore?date=today%201-m&q=%2Fm%2F0132vv")

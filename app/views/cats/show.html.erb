@@ -31,8 +31,8 @@
   </div>
 
   <% if @first_video && @videos %>
-    <div class="youtube">
-      <div data-target="accordian.first_video" class="videoWrapper first_video">
+    <div class="youtube" data-target="accordian.first_video">
+      <div class="videoWrapper first_video">
         <iframe src="<%= @video_prefix + @first_video.video_id %>"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
