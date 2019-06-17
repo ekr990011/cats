@@ -29,6 +29,12 @@ gem 'mechanize'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Adds support for Capybara system testing and selenium driver
+gem 'capybara', '>= 2.15'
+gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
+# Easy installation and use of web drivers to run system tests with browsers
+gem 'webdrivers'
+
 group :production do
   gem 'pg'
 end
@@ -51,10 +57,10 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
+  # gem 'capybara', '>= 2.15'
+  # gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  # gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
