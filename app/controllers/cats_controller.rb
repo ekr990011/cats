@@ -2,7 +2,7 @@ class CatsController < ApplicationController
   before_action :js_css
 
   def index
-
+    @cats = Cat.all
   end
 
   def show
