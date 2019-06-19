@@ -1,0 +1,9 @@
+<%= form_for(@article_comment) do |form| %>
+  <div class="field">
+    <%= form.rich_text_area :body %>
+
+    <%= form.hidden_field :article_id, value: @article.id %>
+
+    <%= form.submit %>
+  </div>
+<% end %>

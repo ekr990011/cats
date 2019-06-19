@@ -10,6 +10,7 @@ class CatsController < ApplicationController
     @video_prefix = "https://www.youtube.com/embed/"
     @first_video = Video.where(cat_id: @cat).first
     @videos = Video.where(cat_id: @cat)[1..4]
+    @cat_comment = CatComment.new
   end
 
   def new

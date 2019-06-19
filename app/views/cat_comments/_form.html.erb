@@ -1,0 +1,9 @@
+<%= form_for(@cat_comment) do |form| %>
+  <div class="field">
+    <%= form.rich_text_area :body %>
+
+    <%= form.hidden_field :cat_id, value: @cat.id %>
+
+    <%= form.submit %>
+  </div>
+<% end %>

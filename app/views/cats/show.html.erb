@@ -39,7 +39,7 @@
         ></iframe>
       </div>
       <div data-target="accordian.youtube" class="article__youtube">
-        <h5>More Interesting Videos about the <%= @cat.title %> !</h5>
+        <h5>More Interesting Videos about the <%= @cat.title.sub(": Facts & Trivia", "") %> !</h5>
         <% @videos.each do |video| %>
           <div class="cat_videos">
             <iframe src="<%= @video_prefix + video.video_id %>"
@@ -57,5 +57,10 @@
     </script>
     <script type="text/javascript">
       trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @cat.social %>","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=%2Fm%2F0132vv","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+  </div>
+
+  <div class="article__comment">
+    <h5>Tell Us About Your <%= @cat.title.sub(": Facts & Trivia", "") %></h5>
+    <%= render 'cat_comments/form' %>
   </div>
 </div>
