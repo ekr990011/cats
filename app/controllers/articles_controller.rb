@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
   def admin
     unless current_user && current_user.admin?
       flash[:danger] = "How dare you use your guile tactics on us!"
-      redirect_to '/cats'
+      redirect_to '/articles'
     end
   end
 
