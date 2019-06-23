@@ -1,5 +1,6 @@
 class CatsController < ApplicationController
   before_action :js_css
+  before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
     @cats = Cat.all
@@ -40,6 +41,13 @@ class CatsController < ApplicationController
 
   def js_css
     @js_css = {css: "cat", js: "cat"}
+  end
+
+  def admin
+    unless current_user && current_user.admin?
+      flash[:danger] = "How dare you use your guile tactics on us!"
+      redirect_to '/cats'
+    end
   end
 
 end

@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :js_css
+  before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
     @articles = Article.all
@@ -38,6 +39,13 @@ class ArticlesController < ApplicationController
 
   def js_css
     @js_css = {css: "article", js: "article"}
+  end
+
+  def admin
+    unless current_user && current_user.admin?
+      flash[:danger] = "How dare you use your guile tactics on us!"
+      redirect_to '/articles'
+    end
   end
 
 end
