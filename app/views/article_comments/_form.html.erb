@@ -4,6 +4,8 @@
 
     <%= form.hidden_field :article_id, value: @article.id %>
 
-    <%= form.submit %>
+    <div class="article__comment_submit">
+      <%= form.submit "Submit", class: "btn submit" %>
+    </div>
   </div>
 <% end %>

@@ -8,5 +8,17 @@
   <div class="article__comment">
     <h5>Tell Us Your Thoughts!</h5>
     <%= render 'article_comments/form' %>
+
+    <% if @article_comments %>
+      <div class="article__comments">
+        <% @article_comments.each do |comment| %>
+          <div class="comment">
+            <%= comment.body %>
+          </div>
+        <% end %>
+
+        <%= will_paginate @article_comments, class: "digg_pagination" %>
+      </div>
+    <% end %>
   </div>
 </div>

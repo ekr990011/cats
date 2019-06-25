@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import 'header.scss';
+@import 'will_paginate.css';
 
 // font-family: 'Source Sans Pro', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
@@ -52,4 +53,42 @@ html body {
   height: 100%;
   width: 100%;
   border: 0;
+}
+
+.article__comments {
+  margin-bottom: 15px;
+
+  .comment {
+    border-radius: 2em;
+    padding: 5px 15px 5px 15px;
+    margin-top: 5px;
+  }
+
+  .comment:nth-child(even) {
+    background: #daffe2;
+  }
+
+  .comment:nth-child(odd) {
+    background: #e2eaff;
+  }
+}
+
+.article__comment {
+  font-size: 24px;
+
+  h5 {
+    text-align: center;
+  }
+
+  .article__comment_submit {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .submit {
+      color: #ffffff;
+      background-color: #2669ff;
+    }
+  }
 }

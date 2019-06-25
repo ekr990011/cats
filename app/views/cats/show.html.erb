@@ -53,14 +53,27 @@
   <% end %>
 
   <div data-target="accordian.socialrank" class="article__socialrank">
-    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js">
+    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js" async>
     </script>
-    <script type="text/javascript">
-      trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @cat.social %>","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=%2Fm%2F0132vv","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+    <script type="text/javascript" async>
+      trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @cat.social %>","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=%2Fm%2F0132vv","guestPath":"https://trends.google.com:443/trends/embed/"});
+    </script>
   </div>
 
   <div class="article__comment">
     <h5>Tell Us About Your <%= @cat.title.sub(": Facts & Trivia", "") %></h5>
     <%= render 'cat_comments/form' %>
+
+    <% if @cat_comments %>
+      <div class="article__comments">
+        <% @cat_comments.each do |comment| %>
+          <div class="comment">
+            <%= comment.body %>
+          </div>
+        <% end %>
+
+        <%= will_paginate @cat_comments, class: "digg_pagination" %>
+      </div>
+    <% end %>
   </div>
 </div>

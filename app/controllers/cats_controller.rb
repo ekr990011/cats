@@ -1,5 +1,6 @@
 class CatsController < ApplicationController
   before_action :js_css
+  before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
     @cats = Cat.all
@@ -10,6 +11,7 @@ class CatsController < ApplicationController
     @video_prefix = "https://www.youtube.com/embed/"
     @first_video = Video.where(cat_id: @cat).first
     @videos = Video.where(cat_id: @cat)[1..4]
+    @cat_comments = CatComment.paginate(page: params[:page], per_page: 5 ).order('created_at DESC')
     @cat_comment = CatComment.new
   end
 
@@ -41,6 +43,13 @@ class CatsController < ApplicationController
 
   def js_css
     @js_css = {css: "cat", js: "cat"}
+  end
+
+  def admin
+    unless current_user && current_user.admin?
+      flash[:danger] = "How dare you use your guile tactics on us!"
+      redirect_to '/cats'
+    end
   end
 
 end
