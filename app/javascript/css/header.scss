@@ -3,16 +3,69 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 }
 
-.logo {
-  background-color: pink;
-  height: 50px;
-  width: 50px;
-  margin-left: 10px;
+.website {
+  border-bottom: 1px solid #cbcbcb;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.feedback {
+  margin-right: 10px;
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: #bb87ff;
+    }
+  }
 }
 
 .links {
   background-color: blue;
   margin-right: 10px;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  margin-left: 10px;
+  padding: 0;
+  // padding-bottom: 56.25%;
+  // overflow: hidden;
+  text-align: center;
+  // flex: 0.45 1;
+
+  .logo__cat {
+    width: 6em;
+    // background-image: url("./packs/media/images/header/cat.png");
+
+    img {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // bottom: 0;
+      // height: 100%;
+      // width: 100%;
+      // border: 0;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.slogan {
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: #bb87ff;
+    }
+  }
 }

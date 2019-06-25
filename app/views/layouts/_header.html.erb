@@ -1,11 +1,15 @@
 <div class="header">
   <div class="logo">
-    logo here
+    <div class="logo__cat">
+      <%= link_to root_path do %>
+        <%= image_pack_tag 'media/images/header/cat.png' %>
+      <% end %>
+    </div>
+    <h1 class="slogan"><%= link_to "Feline Fancy", root_path %></h1>
   </div>
   <div class="website">
-    <h1>PussiesRus</h1>
-  </div>
-  <div class="links">
-    <h2>Articles</h2>
+    <div>
+      <h4 class="feedback"><%= link_to "Feedback & Suggestions", new_contact_path %></h4>
+    </div>
   </div>
 </div>

@@ -2,9 +2,7 @@ class CatCommentsController < ApplicationController
 
   def create
     cat = Cat.find_by_id(cat_comment_params[:cat_id])
-    unless cat_comment_params[:body] == ""
-      CatComment.create(cat_comment_params)
-    end
+    CatComment.create(cat_comment_params)
     redirect_to cat
   end
 

@@ -25,3 +25,6 @@ require("@rails/actiontext")
 
 import 'css/application'
 import "controllers"
+
+const importAll = (r) => r.keys().map(r)
+importAll(require.context('../images/header', false, /\.(png|jpe?g|svg)$/));
