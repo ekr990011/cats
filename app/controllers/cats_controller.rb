@@ -1,9 +1,11 @@
 class CatsController < ApplicationController
   before_action :js_css
+  before_action :index_js_css, only: [:index]
   before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
     @cats = Cat.all
+    @articles = Article.all
   end
 
   def show
@@ -43,6 +45,10 @@ class CatsController < ApplicationController
 
   def js_css
     @js_css = {css: "cat", js: "cat"}
+  end
+
+  def index_js_css
+    @index = {css: "article", js: "article"}
   end
 
   def admin

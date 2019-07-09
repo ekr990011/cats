@@ -1,0 +1,19 @@
+<div class="index">
+  <div class="index__articles">
+    <% @articles.each do |article| %>
+      <div class="index__article" style="background-image: url('<%= asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');">
+        <%= article.title %>
+      </div>
+    <% end %>
+  </div>
+
+
+  <!-- style="background-image: url('<%# asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');" -->
+  <div class="index__cats">
+    <% @cats.each do |cat| %>
+      <div class="index__cat" style="background-image: url('<%= asset_pack_path 'media/images/cats/' + cat.image %>');">
+
+      </div>
+    <% end %>
+  </div>
+</div>
