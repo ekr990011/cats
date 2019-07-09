@@ -1,19 +1,30 @@
 <div class="index">
+  <!-- <div class="index__articles">
+    <%# @articles.each do |article| %>
+      <div class="index__article" style="background-image: url('<%# asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');">
+        <%# article.title %>
+      </div>
+    <%# end %>
+  </div> -->
+
   <div class="index__articles">
     <% @articles.each do |article| %>
-      <div class="index__article" style="background-image: url('<%= asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');">
-        <%= article.title %>
+      <div class="blog-card">
+        <img class="blog-img" src="<%= asset_pack_path article.image %>" />
+        <div class="text-overlay">
+          <h2><%= article.title %></h2>
+        </div>
       </div>
     <% end %>
   </div>
 
 
   <!-- style="background-image: url('<%# asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');" -->
-  <div class="index__cats">
-    <% @cats.each do |cat| %>
-      <div class="index__cat" style="background-image: url('<%= asset_pack_path 'media/images/cats/' + cat.image %>');">
+  <!-- <div class="index__cats">
+    <%# @cats.each do |cat| %>
+      <div class="index__cat" style="background-image: url('<%# asset_pack_path 'media/images/cats/' + cat.image %>');">
 
       </div>
-    <% end %>
-  </div>
+    <%# end %>
+  </div> -->
 </div>
