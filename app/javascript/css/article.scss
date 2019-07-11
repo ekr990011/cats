@@ -27,3 +27,22 @@
     line-height: 1.8;
   }
 }
+
+.scroll_buttons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .scroll_bottom {
+    height: 100px;
+    background-color: pink;
+  }
+
+  .scroll_top {
+    height: 100px;
+    background-color: blue;
+    margin-right: 10px;
+  }
+}

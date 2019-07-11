@@ -2,6 +2,8 @@
   background: white;
   cursor: default;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
   /* self-clearing method: */ }
   .digg_pagination a, .digg_pagination span, .digg_pagination em {
     padding: 0.2em 0.5em;
