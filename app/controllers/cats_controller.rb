@@ -6,6 +6,7 @@ class CatsController < ApplicationController
   def index
     @cats = Cat.all
     @articles = Article.all
+    @homepage = true
   end
 
   def show

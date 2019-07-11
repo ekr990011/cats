@@ -6,6 +6,23 @@
     <h1 class="slogan"><%= link_to "Feline Fancy", root_path %></h1>
   </div>
   <div class="website">
+    <div class="buttons" data-controller="scroll">
+      <% if @homepage %>
+        <%= link_to( root_path, data: {action: "click->scroll#articles"} ) do %>
+          <h4>Articles</h4>
+        <% end %>
+        <%= link_to( root_path, data: {action: "click->scroll#catBreeds"} ) do %>
+          <h4>Cat Breeds</h4>
+        <% end %>
+      <% else %>
+        <%= link_to( root_path(scroll: "1") ) do %>
+          <h4>Articles</h4>
+        <% end %>
+        <%= link_to( root_path(scroll: "2") ) do %>
+          <h4>Cat Breeds</h4>
+        <% end %>
+      <% end %>
+    </div>
     <div>
       <h4 class="feedback"><%= link_to "Feedback & Suggestions", new_contact_path %></h4>
     </div>

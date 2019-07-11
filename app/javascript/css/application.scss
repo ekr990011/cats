@@ -6,6 +6,10 @@
 // font-family: 'Source Sans Pro', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 html body {
   display: flex;
   flex-direction: column;

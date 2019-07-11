@@ -1,30 +1,29 @@
 <div class="index">
-  <!-- <div class="index__articles">
-    <%# @articles.each do |article| %>
-      <div class="index__article" style="background-image: url('<%# asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');">
-        <%# article.title %>
-      </div>
-    <%# end %>
-  </div> -->
-
+  <h2 class="article_header">Articles</h2>
   <div class="index__articles">
     <% @articles.each do |article| %>
-      <div class="blog-card">
-        <img class="blog-img" src="<%= asset_pack_path article.image %>" />
-        <div class="text-overlay">
-          <h2><%= article.title %></h2>
+      <a class="blog-link" href="/articles/<%= article.id %>">
+        <div class="blog-card">
+            <img class="blog-img" src="<%= asset_pack_path article.image %>" />
+            <div class="text-overlay">
+              <h2><%= article.title %></h2>
+            </div>
         </div>
-      </div>
+      </a>
     <% end %>
   </div>
 
-
-  <!-- style="background-image: url('<%# asset_pack_path 'media/images/warfare/N2barrell.jpg' %>');" -->
-  <!-- <div class="index__cats">
-    <%# @cats.each do |cat| %>
-      <div class="index__cat" style="background-image: url('<%# asset_pack_path 'media/images/cats/' + cat.image %>');">
-
-      </div>
-    <%# end %>
-  </div> -->
+  <h2 class="cat_header">Cat Breeds</h2>
+  <div class="index__cats">
+    <% @cats.each do |cat| %>
+      <a href="/cats/<%= cat.id %>">
+        <div class="cat-blog-card">
+            <img class="blog-img" src="<%= asset_pack_path 'media/images/cats/' + cat.image %>" />
+          <div class="cat-text-overlay">
+            <h2><%= cat.title.sub(" Cat: Facts & Trivia", "") %></h2>
+          </div>
+        </div>
+      </a>
+    <% end %>
+  </div>
 </div>
