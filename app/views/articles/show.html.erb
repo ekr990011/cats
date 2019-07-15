@@ -21,12 +21,16 @@
       </div>
     <% end %>
   </div>
-  <div class="scroll_buttons">
+  <div class="scroll_buttons" data-controller="article-scroll">
     <div class="scroll_bottom">
-
+      <button class="btn" type="button" name="scroll_bottom" data-action="click->article-scroll#scrollBottom">
+        Scroll Bottom &#9660;
+      </button>
     </div>
     <div class="scroll_top">
-
+      <button class="btn" type="button" name="scroll_top" data-action="click->article-scroll#scrollTop">
+        Scroll Top &#9650;
+      </button>
     </div>
   </div>
 </div>

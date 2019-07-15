@@ -34,15 +34,34 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: 0.8em;
 
   .scroll_bottom {
-    height: 100px;
-    background-color: pink;
+
+    .btn {
+      background-color: #e4e4e4;
+      border: 1px solid black;
+
+      &:hover,
+      &:focus {
+        color: #9555af;
+        cursor: pointer;
+      }
+    }
   }
 
   .scroll_top {
-    height: 100px;
-    background-color: blue;
     margin-right: 10px;
+
+    .btn {
+      background-color: #e4e4e4;
+      border: 1px solid black;
+
+      &:hover,
+      &:focus {
+        color: #9555af;
+        cursor: pointer;
+      }
+    }
   }
 }
