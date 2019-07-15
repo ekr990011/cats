@@ -16,7 +16,7 @@
   <h2 class="cat_header">Cat Breeds</h2>
   <div class="index__cats">
     <% @cats.each do |cat| %>
-      <a href="/cats/<%= cat.id %>">
+      <a class="cat-link" href="/cats/<%= cat.id %>">
         <div class="cat-blog-card">
             <img class="blog-img" src="<%= asset_pack_path 'media/images/cats/' + cat.image %>" />
           <div class="cat-text-overlay">
