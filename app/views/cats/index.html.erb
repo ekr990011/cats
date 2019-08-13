@@ -7,6 +7,10 @@
             <img class="blog-img" src="<%= asset_pack_path article.image %>" />
             <div class="text-overlay">
               <h2><%= article.title %></h2>
+              <p>
+                <%= article.short_description.truncate(138) if article.short_description %>
+                <i>Read More</i>
+              </p>
             </div>
         </div>
       </a>
@@ -21,6 +25,10 @@
             <img class="blog-img" src="<%= asset_pack_path 'media/images/cats/' + cat.image %>" />
           <div class="cat-text-overlay">
             <h2><%= cat.title.sub(" Cat: Facts & Trivia", "") %></h2>
+            <p>
+              <%= cat.short_description.truncate(83) if cat.short_description %>
+              <i>Read More</i>
+            </p>
           </div>
         </div>
       </a>
