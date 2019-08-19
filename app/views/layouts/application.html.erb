@@ -37,6 +37,14 @@
         enable_page_level_ads: true
       });
     </script>
+
+    <% if @twitterTitle %>
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="<%= @twitterTitle %>" />
+      <meta name="twitter:url" content= <%= @twitterURL %> />
+      <meta name="twitter:image" content="felinesfancy.com<%= asset_pack_path @twitterImage %>"  />
+    <% end %>
+
   </head>
 
   <body>
