@@ -39,10 +39,11 @@
     </script>
 
     <% if @twitterTitle %>
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="<%= @twitterTitle %>" />
-      <meta name="twitter:url" content= <%= @twitterURL %> />
-      <meta name="twitter:image" content="felinesfancy.com<%= asset_pack_path @twitterImage %>"  />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:title" content="<%= @twitterTitle %>" />
+      <meta property="og:url" content=<%= @twitterURL %> />
+      <meta property="og:image" content="felinesfancy.com<%= asset_pack_path @twitterImage %>"  />
+      <meta property="og:description" content="<%= @twitterDescription %>" />
     <% end %>
 
   </head>

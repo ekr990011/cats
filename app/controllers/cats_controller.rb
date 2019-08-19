@@ -18,7 +18,8 @@ class CatsController < ApplicationController
     @cat_comment = CatComment.new
     @twitterTitle = @cat.title
     @twitterURL = "felinesfancy.com/cats/#{@cat.id}"
-    @twitterImage = 'media/images/cats/' + @cat.image 
+    @twitterImage = 'media/images/cats/' + @cat.image
+    @twitterDescription = @cat.short_description
   end
 
   def new

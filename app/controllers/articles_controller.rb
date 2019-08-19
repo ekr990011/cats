@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
     @twitterTitle = @article.title
     @twitterURL = "felinesfancy.com/articles/#{@article.id}"
     @twitterImage = @article.image
+    @twitterDescription = @article.short_description
   end
 
   def new
