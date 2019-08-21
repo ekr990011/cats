@@ -39,6 +39,7 @@
     </script>
 
     <% if @twitterTitle %>
+      <meta property="og:type" content="article" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:title" content="<%= @twitterTitle %>" />
       <meta property="og:url" content=<%= @twitterURL %> />
