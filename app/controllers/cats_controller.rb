@@ -16,6 +16,10 @@ class CatsController < ApplicationController
     @videos = Video.where(cat_id: @cat)[1..4]
     @cat_comments = CatComment.paginate(page: params[:page], per_page: 5 ).order('created_at DESC')
     @cat_comment = CatComment.new
+    @twitterTitle = @cat.title
+    @twitterURL = "felinesfancy.com/cats/#{@cat.id}"
+    @twitterImage = 'media/images/cats/' + @cat.image
+    @twitterDescription = @cat.short_description
   end
 
   def new
