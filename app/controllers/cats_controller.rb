@@ -17,7 +17,7 @@ class CatsController < ApplicationController
     @cat_comments = CatComment.paginate(page: params[:page], per_page: 5 ).order('created_at DESC')
     @cat_comment = CatComment.new
     @twitterTitle = @cat.title
-    @twitterURL = "felinesfancy.com/cats/#{@cat.id}"
+    @twitterURL = "http://www.felinesfancy.com/cats/#{@cat.id}"
     @twitterImage = 'media/images/cats/' + @cat.image
     @twitterDescription = @cat.short_description
   end

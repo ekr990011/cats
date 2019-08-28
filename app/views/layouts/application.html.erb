@@ -39,11 +39,16 @@
     </script>
 
     <% if @twitterTitle %>
+      <meta property="fb:app_id" content="2658928914117851">
+      <meta property="og:type" content="article" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:title" content="<%= @twitterTitle %>" />
       <meta property="og:url" content=<%= @twitterURL %> />
-      <meta property="og:image" content="felinesfancy.com<%= asset_pack_path @twitterImage %>"  />
+      <meta property="og:image" content="http://www.felinesfancy.com<%= asset_pack_path @twitterImage %>"  />
+      <meta name="twitter:image" content="http://www.felinesfancy.com<%= asset_pack_path @twitterImage %>">
       <meta property="og:description" content="<%= @twitterDescription %>" />
+      <meta property="article:published_time" content="2019-08-21T00:01:56+00:00" />
+      <meta property="article:author" content="Feline's Fancy" />
     <% end %>
 
   </head>
@@ -51,5 +56,10 @@
   <body>
     <%= render 'layouts/header' %>
     <%= yield %>
+
+    <script src="//assets.pinterest.com/js/pinit.js"
+      type="text/javascript" async defer
+      data-pin-hover="true">
+    </script>
   </body>
 </html>
