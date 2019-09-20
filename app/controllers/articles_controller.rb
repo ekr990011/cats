@@ -3,13 +3,13 @@ class ArticlesController < ApplicationController
   before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 1 ).order('created_at DESC')
     @articles = [] if @articles.length == 0
   end
 
   def show
     @article = Article.find_by_id(params[:id])
-    @article_comments = ArticleComment.paginate(page: params[:page], per_page: 5 ).order('created_at DESC')
+    @article_comments = ArticleComment.all
     @article_comment = ArticleComment.new
     @twitterTitle = @article.title
     @twitterURL = "http://www.felinesfancy.com/articles/#{@article.id}"
