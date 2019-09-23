@@ -4,8 +4,8 @@ class CatsController < ApplicationController
   before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
-    @cats = Cat.paginate(page: params[:cat_page], per_page: 2 ).order('created_at ASC')
-    @articles = Article.paginate(page: params[:page], per_page: 2 ).order('created_at ASC')
+    @cats = Cat.paginate(page: params[:cat_page], per_page: 4 ).order('created_at ASC')
+    @articles = Article.paginate(page: params[:page], per_page: 3 ).order('created_at ASC')
     @homepage = true
   end
 
