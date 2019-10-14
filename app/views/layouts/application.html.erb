@@ -55,7 +55,8 @@
     <% if @twitterTitle %>
 
       <script type="application/ld+json">
-          { "@context": "https://schema.org",
+        {
+          "@context": "https://schema.org",
           "@type": "Article",
           "headline": "<%= @twitterTitle %>",
           "author": "Cat Lover",
@@ -68,10 +69,11 @@
             "logo": {
               "@type": "ImageObject",
               "url": "http://www.felinesfancy.com/packs/media/images/header/cat-89b4ce7373715a13d908045ab7e67482.png"
-            },
+            }
+          },
           "url": "<%= @twitterURL %>",
           "description": "<%= @twitterDescription %>"
-          }
+        }
       </script>
 
     <% else %>
