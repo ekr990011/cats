@@ -52,6 +52,33 @@
       <meta property="article:author" content="Feline's Fancy" />
     <% end %>
 
+    <% if @twitterTitle %>
+
+      <script type="application/ld+json">
+          { "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "<%= @twitterTitle %>",
+          "image": "http://www.felinesfancy.com<%= asset_pack_path @twitterImage %>",
+          "genre": "pets",
+          "url": <%= @twitterURL %>,
+          "description": "<%= @twitterDescription %>",
+          }
+      </script>
+
+    <% else %>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "Felines Fancy",
+        "description": "All about domestic cats, cat breed profiles, and articles about taking care of your cat"
+      }
+    </script>
+
+    <% end %>
+
+
   </head>
 
   <body>
