@@ -58,8 +58,17 @@
           { "@context": "https://schema.org",
           "@type": "Article",
           "headline": "<%= @twitterTitle %>",
+          "author": "Cat Lover",
           "image": "http://www.felinesfancy.com<%= asset_pack_path @twitterImage %>",
           "genre": "pets",
+          "datePublished": "2019-09-20",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Felines Fancy",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "http://www.felinesfancy.com/packs/media/images/header/cat-89b4ce7373715a13d908045ab7e67482.png"
+            }
           "url": "<%= @twitterURL %>",
           "description": "<%= @twitterDescription %>"
           }
