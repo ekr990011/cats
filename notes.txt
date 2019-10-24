@@ -1,0 +1,2 @@
+https://vitux.com/editing-pictures-on-linux-command-line-with-imagemagick/
+image magick command line article  (use quality to reduce image size)
