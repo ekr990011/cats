@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :article_comments, only: [:create]
   resources :sessions, only: [:new, :create]
   resources :contacts, only: [:new, :create]
-  resources :cat_personality_test, only: [:new, :create]
+  resources :cat_personality_test, only: [:new, :create, :show]
 
 end

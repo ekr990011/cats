@@ -10,10 +10,14 @@ class CatPersonalityTestController < ApplicationController
   def create
     #somethingfoo(params)
     catNumber = catPersonality(params)
-    puts "cat number"
-    puts catNumber
+    # puts "cat number"
+    # puts catNumber
 
-    redirect_to new_cat_personality_test_path
+    redirect_to cat_personality_test_path(catNumber)
+  end
+
+  def show
+    CatPersonality.find(params[:id])
   end
 
 end
