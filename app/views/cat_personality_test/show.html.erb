@@ -1,1 +1,23 @@
-Cat personality test SHOW
+
+  <h4>
+    <%= @catPersonality.name %>
+  </h4>
+  <p>
+    <img src="<%= asset_pack_path 'media/images/catPersonality/' + @catPersonality.image %>"
+  </p>
+  <p>
+    Personality:
+    <%= @catPersonality.personality %>
+  </p>
+  <p>
+    Business:
+    <%= @catPersonality.business %>
+  </p>
+  <p>
+    Romance:
+    <%= @catPersonality.romance %>
+  </p>
+  <p>
+    Athletics:
+    <%= @catPersonality.athletics %>
+  </p>

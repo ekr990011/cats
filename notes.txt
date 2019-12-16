@@ -1,2 +1,3 @@
 https://vitux.com/editing-pictures-on-linux-command-line-with-imagemagick/
-image magick command line article  (use quality to reduce image size)
+imagemagick command line article  (use quality to reduce image size)
+https://medium.com/@andysolomon/converting-your-images-to-webp-with-imagemagick-a9c56cf6b579

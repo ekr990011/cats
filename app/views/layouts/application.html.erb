@@ -4,8 +4,10 @@
     <title>Feline Fancy: <%= @twitterTitle if @twitterTitle  %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138906419-3"></script>
+    <% if (Rails.env == 'production') %>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138906419-3"></script>
+    <% end %>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

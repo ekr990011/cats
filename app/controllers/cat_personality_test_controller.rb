@@ -1,4 +1,5 @@
 class CatPersonalityTestController < ApplicationController
+  before_action :js_css
 
   include Result
 
@@ -14,10 +15,25 @@ class CatPersonalityTestController < ApplicationController
     # puts catNumber
 
     redirect_to cat_personality_test_path(catNumber)
+    #redirect_to  cat_personality_test_index_path
   end
 
   def show
-    CatPersonality.find(params[:id])
+    @catPersonality  = CatPersonality.find_by(catID: params[:id])
+
+    puts CatPersonality.find_by(catID: params[:id]).name
+    puts @catPersonality.name
+  end
+
+  def index
+    @catPersonality = CatPersonality.all
+  end
+
+
+  private
+
+  def js_css
+    @js_css = {css: "catPersonality", js: "catPersonality"}
   end
 
 end

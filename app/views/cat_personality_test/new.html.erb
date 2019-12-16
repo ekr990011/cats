@@ -1,8 +1,8 @@
 "Index cat personality type"
 
 
-<%= form_with url: cat_personality_test_index_path do %>
-  <h3> What is your gender></h3>
+<%= form_with url: cat_personality_test_index_path, local: true do %>
+  <h3> What is your gender?</h3>
     <%= radio_button_tag(:Q0, "female") %>
     <%= label_tag("female") %>
     <p>
@@ -199,7 +199,7 @@
                 <%= radio_button_tag(:Q10, "f") %>
                 <%= label_tag(:f, "f) I suspect that you are wasting my time to improve your SEO rating") %>
                 </p>
-              
+
 
   <%= submit_tag "Submit" %>
 <% end %>

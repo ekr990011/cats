@@ -12,7 +12,7 @@
 CatPersonality.create(
   catID: 1,
   name: 'Siamese',
-  image: '',
+  image: 'qSiameseHead.jpg',
   personality: 'You constantly have friends around and you almost never stop talking.  You are outgoing, personable, loving and have almost limitless energy, but you can be dominating, impatient, and bossy.  You hate being alone and are a bit of a social climber.',
   business: 'You do well in organizations, especially if you are in charge.  Oddly enough you like to have at least one person who has a similar personality in your business.  You find investing too slow and boring.  Business success comes easily for you.',
   romance: 'You are loving and a passionate lover, but the people you love often feel neglected because you are so busy.  You also tend to overwhelm every conversation.  You are most compatible with a Toyger or a Persian, but you should avoid other Siamese and American Bobtails.',
@@ -22,7 +22,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 2,
   name: 'American Bobtail',
-  image: '',
+  image: 'qAmBobtailHead.jpg',
   personality: 'You are fearless, intelligent, easy going and loyal.  You are a bit introverted, and like your alone time.  You are a bit aloof, which some people may mistake for being arrogant.  You are quiet, but not afraid to state when your opinion when you feel it necessary.',
   business: 'You are entrepreneurial and will do better starting your own business or in a small business than in a large organization.  You have an independent streak and willing to strike out on your own ventures that others may deride or ridicule.  You are patient and may be a good investor.  You will find success in business, but it will not be a straight path.',
   romance: 'You have to be careful with romantic relationships.  Your easy going manner and loyalty make you an easy target for mates that will take advantage of you.  If you can avoid this mistake, you will have successful romantic life punctuated with extremely passionate interludes.
@@ -33,7 +33,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 3,
   name: 'Japanese Bobtail',
-  image: '',
+  image: 'qJapaneseBobtailHead.jpg',
   personality: 'If your friends had to choose one word to describe you, it would be lucky.  You are easy going to the point of almost appearing oblivious.  You are intelligent, caring, and loyal but not clingy.  You are very talkative and have soft melodious voice that causes people to seek you out for a conversation.',
   business: 'You are lucky and will do well at almost any business, but you do not have a strong interest in building or running a large organization.  You will particularly thrive in the entertainment business.  Many Japanese Bobtails are highly successful singers.  Ultimately, you are not interested in building a large fortune, because you have so many other interests.',
   romance: 'You find romantic partners easily and almost all of them are successful relationships and happy.  Even your breakups seem effortless and painless.  You are loving and caring and easy to get along with.  However if you do have an unsuccessful romance it is likely to be extremely painful.  You are most compatible with an Egyptian Mau or a Persian but you should avoid Maine Coons and Ragamuffins.',
@@ -43,7 +43,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 4,
   name: 'Toyger',
-  image: '',
+  image: 'qToygerHead.jpg',
   personality: 'People describe you as having a regal personality.  You are always gracious and never do or say anything controversial.  Your manners are impeccable and you cannot understand why people spend their time on petty bickering, gossip, and politics.  You are pretty sure the world does or should revolve around you, after all you are a Toyger.',
   business: 'You do not actively engage in business, investing or commerce.  Those activities are for peasants.  If you are forced to be involved in these activities, due to some unfortunate and clearly unjust circumstance, you are actually a very sly and skillful investor. ',
   romance: 'Finding romantic relationships comes easily for you, after all you are beautiful since you are a Toyger.  Your ideal mate will be successful in business and handle all those annoying details in life.  You are pretty sure you should be able to spend your life on beach drinking champagne, getting a nice tan, and perfecting your perfect body.
@@ -55,7 +55,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 5,
   name: 'Ragamuffin',
-  image: '',
+  image: 'qRagamuffinHead.jpg',
   personality: 'You are extremely easy to get along with.  Everyone feels comfortable with you around.  You are carefree to the point of being negligent.  You are loyal to a fault. ',
   business: 'You do not like to let work get in the way of your life.  You do best as an employee in a larger organization.  You tend to be a calming influence on any work place and this makes you prized by your employers.  As long as you have money for the essentials, you have very little interest in money, investing or business.',
   romance: 'You love to cuddle, lie around in bed with your lover and you make your partners feel very loved.  The right partner makes you go limp.  Often your lovers will play with your beautiful hair for hours.
@@ -66,7 +66,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 6,
   name: 'Maine Coon Cat',
-  image: '',
+  image: 'qMaineCoonHead.jpg',
   personality: 'People describe you as gentle giant, with incredible common sense.  You are gregarious, level headed, practical,  and love to play and joke around.  Almost nothing can cause you to lose you temper.  People love having around, but you also enjoy being out in nature by yourself.',
   business: 'You do well in smaller businesses that you have a controlling interest in, although if your business grows large you still run it with that personal touch of a home town business.  You have no use for Wall Street or fancy financial wizardry, which you hold at the same level as a patent medicine salesman.',
   romance: 'You are a sturdy, loyal lover and will have practical, down to Earth relationships.    You keep your lover warm at night.  You will have a long, happy practical marriage.
@@ -77,7 +77,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 7,
   name: 'Norwegian Forest Cat',
-  image: '',
+  image: 'qNorwegianForestHead.jpg',
   personality: 'You are friendly, outgoing and always have lots of friends around, however you are a little leery of strangers until you get to know them.  You have a practical intelligence and great discernment.',
   business: 'Business is a practical issue to you.  You are likely to own a simple, small business or be an employee with a lot of independence.  Your idea of investing is owning things, like cars, boats, cabins, etc.  You are more likely to invest in a vintage sports car or classic boat than own stocks or bonds.',
   romance: 'You attract members of the opposite sex easily with your gregarious, outgoing nature.  Despite this you are slow to let a lover into your life.  Your lover will always have a good time with you, but may complain that you do not spend enough time together alone or that your are not passionate enough.  Flowers, chocolates, and jewelry are not your thing.
@@ -88,7 +88,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 8,
   name: 'Dragon Li (Li Hau)',
-  image: '',
+  image: 'qLiHauHead.jpg',
   personality: 'You are affectionate, mellow, and generally quiet.  Despite getting along well with people, you are described as a little different.  You are very intelligent and this can put off other people.',
   business: 'You do well at business fairly effortlessly, but you have not desire to build a huge business.  Technical and scientific businesses appeal to you.  Investing also comes fairly easily to you.',
   romance: 'You are an affectionate lover, but not particularly passionate.  Your mate may feel that you are little distant.  They also may complain that you do not talk to them enough.
@@ -99,7 +99,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 9,
   name: 'Persian',
-  image: '',
+  image: 'qPersianHead.jpg',
   personality: 'People describe you as beautiful, graceful, aristocratic and entitled.  You are mellow, but easily upset by changes to your environment.  You get along well with the right kind of people.  You are not particularly talkative, but your close friends and family greatly enjoy your company.',
   business: '“What’s that” would likely be your response in jest about business.  You have no interest in business or a career or any that other nonsense.  You will stoop to working, if you absolutely have to, but otherwise you expect to be treated like royalty.',
   romance: 'Your beauty attracts many lovers, which you may entertain in your youth, but just seems like a nuisance as you get older.  When you find the right match, you will stick fast with that person.
@@ -110,7 +110,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 10,
   name: 'Egyptian Mau',
-  image: '',
+  image: 'qEgyptianMauHead.jpg',
   personality: 'You are constantly busy, very curious, loyal, and bit of a practical joker.  You have life long friends and are well liked, but you are leery of strangers.  You are considered to be very animated, but not a drama queen.',
   business: 'You like doing hands on work, whether as an employee or as a business owner.  You do well enough at business, but building a large fortune has no interest for you.  You find investing too slow and not hands on enough to hold your interest.',
   romance: 'It takes you a while, but once you find the right person you are inseparable.  Some people think you spend too much time and share too many activities with your spouse.  Unlike most people, you actually are quite comfortable having your spouse working with you in your business.
@@ -121,7 +121,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 11,
   name: 'Cornish Rex',
-  image: '',
+  image: 'qCornishRexHead.jpg',
   personality: 'You are very busy and talkative.  You are known for being highly articulate, a little flamboyant and a bit of joker.  You are loyal, loving, but not above being a little bit deceptive if necessary.',
   business: 'You are likely to be an actor, salesperson, in the arts, or a highly successful cat burglar.  You are more interested in relationships, than finance.',
   romance: 'You will have many lovers when you are young, but as you get older you will find the one person who is right for you.
@@ -132,7 +132,7 @@ CatPersonality.create(
 CatPersonality.create(
   catID: 12,
   name: 'American Shorthair',
-  image: '',
+  image: 'qAmShorthairHead.jpg',
   personality: 'People describe you are sturdy, reliable, and even tempered.  You are comfortable in your own company, but equal happy to be family and friends.  You take things one day at a time.',
   business: 'You will do well as a farmer, rancher, fisherman or in transportation.  You have a cool head that serves you well.  You shun complex business schemes.  As a result, you occasionally miss out on some big opportunities, but you avoid big business and financial disasters.',
   romance: 'You are a great, steady, loyal spouse, but not particularly passionate.  In order for you to have a successful marriage or long term relationship it is important that you find someone who values these qualities.
