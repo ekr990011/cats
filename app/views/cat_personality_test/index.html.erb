@@ -1,5 +1,27 @@
-Cat Personality Index
+<h1>Cat Personalities</h1>
 
-<% @catPersonality.each do |x| %>
-  <p>  <%= x.name %>   </p>
-<% end %>
+<div class="index">
+    <% @catPersonality.each do |x| %>
+      <div class="cat_personality_index">
+        <h2><%= x.name %></h2>
+        <img src="<%= asset_pack_path 'media/images/catPersonality/' + x.image %>">
+        <div class="trait">
+          <b>Personality:</b>
+          <p><%= x.personality %></p>
+        </div>
+        <div class="trait">
+          <b>Business:</b>
+          <p><%= x.business %></p>
+        </div>
+        <div class="trait">
+          <b>Romance:</b>
+          <p><%= x.romance %></p>
+        </div>
+        <div class="trait">
+          <b>Athletics:</b>
+          <p><%= x.athletics %></p>
+        </div>
+      </div>
+
+    <% end %>
+</div>
