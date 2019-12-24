@@ -1,13 +1,14 @@
 
 <%= form_with url: cat_personality_test_index_path, local: true do %>
 
-  <div class="test">
+  <div class="test" data-controller="personality-test">
     <h1><span style="color:#ff3300">Cat</span> Personality <span style="color:#ff3300">Test</span> </h1>
+    <p>(Answer these 10 simple multiple choice questions to find out your cat personality)</p>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <img src="/packs/media/images/catPersonality/qAmBobtailHead-83a78fbe29d2601d3b1d953d6e1828e2.jpg">
       <h3> What is your gender?</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q0, "female") %>
           <span style="color:#ff0066"><%= label_tag("female") %></span>
@@ -19,10 +20,9 @@
       </div>
     </div>
 
-
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>1) How would you describe yourself in social situations?</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q1, "a") %>
           <%= label_tag(:a, "a) I am very outgoing, never shy") %>
@@ -42,9 +42,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>2) Would you rather:</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q2, "a") %>
           <%= label_tag(:a, "a) Run a large corporation") %>
@@ -64,9 +64,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>3) Which of these best describes you:</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q3, "a") %>
           <%= label_tag(:a, "a) a passionate lover") %>
@@ -86,9 +86,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>4) Would you prefer to drink:</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q4, "a") %>
           <%= label_tag(:a, "a) wine ") %>
@@ -112,9 +112,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>5) Which of these best describes your ideal vacation:</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q5, "a") %>
           <%= label_tag(:a, "a) sitting on a beach drinking a pina colada") %>
@@ -134,9 +134,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>6) If you were a car, what would you be (pick closest answer):</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q6, "a") %>
           <%= label_tag(:a, "a) corvette, porsche, or lamborghini") %>
@@ -156,9 +156,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>7) Which of these meals sounds the best8</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q7, "a") %>
           <%= label_tag(:a, "a) steak- sizzling, thick, medium rare") %>
@@ -182,9 +182,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>8) What is your favorite competitive sport to watch:</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
         <%= radio_button_tag(:Q8, "a") %>
         <%= label_tag(:a, "a) sports are boring") %>
@@ -208,9 +208,9 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>9) What kind of movies do you like:</h3>
-      <div class="">
+      <div class="" data-action="change->personality-test#nextQuestion">
         <p>
           <%= radio_button_tag(:Q9, "a") %>
           <%= label_tag(:a, "a) action") %>
@@ -230,7 +230,7 @@
       </div>
     </div>
 
-    <div class="question_card">
+    <div class="question_card" data-target="personality-test.question">
       <h3>10) Determine which of these statements apply to you:</h3>
 
       <div class="selection">
@@ -243,7 +243,7 @@
   not speaking English and should be beaten within an inch, not a
   centimeter of their life</p>
         </div>
-        <div class="">
+        <div class="" data-action="change->personality-test#nextQuestion">
           <p>
             <%= radio_button_tag(:Q10, "a") %>
             <%= label_tag(:a, " a) I") %>
