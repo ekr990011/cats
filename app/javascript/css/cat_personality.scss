@@ -1,0 +1,28 @@
+.test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15em;
+}
+
+.question_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3{
+    color: #ff3300;
+    padding: 1em;
+    border-style: none;
+    border-radius: 2em;
+    background-color: #ececf9;
+  }
+
+  div{
+    color: #4d0000;
+  }
+
+  .selection{
+    width: 75%;
+  }
+}
