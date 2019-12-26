@@ -1,8 +1,5 @@
 class CatPersonalityTestController < ApplicationController
-<<<<<<< HEAD
-=======
   before_action :js_css
->>>>>>> cattest
 
   include Result
 
@@ -14,12 +11,7 @@ class CatPersonalityTestController < ApplicationController
   def create
     #somethingfoo(params)
     catNumber = catPersonality(params)
-<<<<<<< HEAD
-    puts "cat number"
-    puts catNumber
-
     redirect_to new_cat_personality_test_path
-=======
     # puts "cat number"
     # puts catNumber
 
@@ -43,7 +35,6 @@ class CatPersonalityTestController < ApplicationController
 
   def js_css
     @js_css = {css: "catPersonality", js: "catPersonality"}
->>>>>>> cattest
   end
 
 end
