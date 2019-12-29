@@ -11,7 +11,7 @@ class CatPersonalityTestController < ApplicationController
   def create
     #somethingfoo(params)
     catNumber = catPersonality(params)
-    redirect_to new_cat_personality_test_path
+    #redirect_to new_cat_personality_test_path
     # puts "cat number"
     # puts catNumber
 

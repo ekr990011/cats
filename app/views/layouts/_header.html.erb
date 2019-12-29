@@ -14,12 +14,18 @@
         <%= link_to( root_path, data: {action: "click->scroll#catBreeds"} ) do %>
           <h4>Cat Breeds</h4>
         <% end %>
+        <%= link_to (new_cat_personality_test_path) do %>
+          <h4>Cat Personality Test</h4>
+        <% end %>
       <% else %>
         <%= link_to( root_path(scroll: "1") ) do %>
           <h4>Articles</h4>
         <% end %>
         <%= link_to( root_path(scroll: "2") ) do %>
           <h4>Cat Breeds</h4>
+        <% end %>
+        <%= link_to (new_cat_personality_test_path) do %>
+          <h4>Cat Personality Test</h4>
         <% end %>
       <% end %>
     </div>
