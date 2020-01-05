@@ -1,3 +1,8 @@
 https://vitux.com/editing-pictures-on-linux-command-line-with-imagemagick/
 imagemagick command line article  (use quality to reduce image size)
 https://medium.com/@andysolomon/converting-your-images-to-webp-with-imagemagick-a9c56cf6b579
+
+
+
+JSON-LD https://ignitevisibility.com/everything-to-know-about-json-ld-for-seo/
+https://jsonld.com/  Steal our JSONLD
