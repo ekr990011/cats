@@ -15,6 +15,8 @@ class ArticlesController < ApplicationController
     @twitterURL = "http://www.felinesfancy.com/articles/#{@article.id}"
     @twitterImage = @article.image
     @twitterDescription = @article.short_description
+    @publication_date = "#{@article.created_at.year}-#{@article.created_at.month}-#{@article.created_at.day}"
+    @date_modified = "#{@article.updated_at.year}-#{@article.updated_at.month}-#{@article.updated_at.day}"
   end
 
   def new
