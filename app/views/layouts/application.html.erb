@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Feline Fancy: <%= @twitterTitle if @twitterTitle  %> </title>
+    <title> <%= (@twitterTitle + " - FelinesFancy" if @twitterTitle) || "FelineFancy"  %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <% if (Rails.env == 'production') %>
