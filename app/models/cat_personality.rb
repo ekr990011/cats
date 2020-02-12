@@ -1,0 +1,2 @@
+class CatPersonality < ApplicationRecord
+end

@@ -4,8 +4,8 @@ class CatsController < ApplicationController
   before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
-    @cats = Cat.all
-    @articles = Article.all
+    @cats = Cat.paginate(page: params[:cat_page], per_page: 4 ).order('created_at ASC')
+    @articles = Article.paginate(page: params[:page], per_page: 3 ).order('created_at ASC')
     @homepage = true
   end
 
@@ -20,6 +20,8 @@ class CatsController < ApplicationController
     @twitterURL = "http://www.felinesfancy.com/cats/#{@cat.id}"
     @twitterImage = 'media/images/cats/' + @cat.image
     @twitterDescription = @cat.short_description
+    @publication_date = "#{@cat.created_at.year}-#{@cat.created_at.month}-#{@cat.created_at.day}"
+    @date_modified = "#{@cat.updated_at.year}-#{@cat.updated_at.month}-#{@cat.updated_at.day}"
   end
 
   def new

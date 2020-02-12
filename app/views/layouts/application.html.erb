@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Feline Fancy: <%= @twitterTitle if @twitterTitle  %> </title>
+    <title> <%= (@twitterTitle + " - FelinesFancy" if @twitterTitle) || "FelineFancy"  %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138906419-3"></script>
+    <% if (Rails.env == 'production') %>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138906419-3"></script>
+    <% end %>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -52,6 +54,45 @@
       <meta property="article:published_time" content="2019-08-21T00:01:56+00:00" />
       <meta property="article:author" content="Feline's Fancy" />
     <% end %>
+
+    <% if @twitterTitle %>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "<%= @twitterTitle %>",
+          "author": "Cat Lover",
+          "image": "http://www.felinesfancy.com<%= asset_pack_path @twitterImage %>",
+          "genre": "pets",
+          "datePublished": "<%= @publication_date %>",
+          "dateModified": "<%= @date_modified %>",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Felines Fancy",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "http://www.felinesfancy.com/packs/media/images/header/cat-89b4ce7373715a13d908045ab7e67482.png"
+            }
+          },
+          "url": "<%= @twitterURL %>",
+          "description": "<%= @twitterDescription %>"
+        }
+      </script>
+
+    <% else %>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "Felines Fancy",
+        "description": "All about domestic cats, cat breed profiles, and articles about taking care of your cat"
+      }
+    </script>
+
+    <% end %>
+
 
   </head>
 

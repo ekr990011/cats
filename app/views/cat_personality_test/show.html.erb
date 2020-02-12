@@ -1,0 +1,21 @@
+<div class="cat_personality">
+  <h2><%= @catPersonality.name %></h2>
+  <img src="<%= asset_pack_path 'media/images/catPersonality/' + @catPersonality.image %>">
+  <div class="trait">
+    <b>Personality:</b>
+    <p><%= @catPersonality.personality %></p>
+  </div>
+  <div class="trait">
+    <b>Business:</b>
+    <p><%= @catPersonality.business %></p>
+  </div>
+  <div class="trait">
+    <b>Romance:</b>
+    <p><%= @catPersonality.romance %></p>
+  </div>
+  <div class="trait">
+    <b>Athletics:</b>
+    <p><%= @catPersonality.athletics %></p>
+  </div>
+  <%= link_to "See All the Cat Personalities", cat_personality_test_index_path %>
+</div>

@@ -1,0 +1,18 @@
+.cat_personality{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15em;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 42em;
+  align-self: center;
+}
+
+.trait{
+  display: flex;
+
+  b{
+    margin: 1em 1em 0 0
+  }
+}

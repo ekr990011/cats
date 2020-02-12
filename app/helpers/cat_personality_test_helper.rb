@@ -1,0 +1,2 @@
+module CatPersonalityTestHelper
+end

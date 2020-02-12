@@ -11,11 +11,13 @@
                 <%= article.short_description.truncate(138) if article.short_description %>
                 <i>Read More</i>
               </p>
+
             </div>
         </div>
       </a>
     <% end %>
   </div>
+  <%= will_paginate @articles, class: "digg_pagination" %>
 
   <h2 class="cat_header">Cat Breeds</h2>
   <div class="index__cats">
@@ -34,4 +36,5 @@
       </a>
     <% end %>
   </div>
+  <%= will_paginate @cats, class: "digg_pagination", param_name: :cat_page %>
 </div>
