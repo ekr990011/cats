@@ -56,7 +56,6 @@
     <% end %>
 
     <% if @twitterTitle %>
-
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -79,18 +78,15 @@
           "description": "<%= @twitterDescription %>"
         }
       </script>
-
     <% else %>
-
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": "Felines Fancy",
-        "description": "All about domestic cats, cat breed profiles, and articles about taking care of your cat"
-      }
-    </script>
-
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "name": "Felines Fancy",
+          "description": "All about domestic cats, cat breed profiles, and articles about taking care of your cat"
+        }
+      </script>
     <% end %>
 
 

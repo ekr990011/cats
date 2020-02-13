@@ -2,17 +2,17 @@ class ArticlesController < ApplicationController
   before_action :js_css
   before_action :admin, only: [:edit, :update, :new, :create]
 
-  def index
-    @articles = Article.paginate(page: params[:page], per_page: 1 ).order('created_at DESC')
-    @articles = [] if @articles.length == 0
-  end
+  # def index
+  #   @articles = Article.paginate(page: params[:page], per_page: 1 ).order('created_at DESC')
+  #   @articles = [] if @articles.length == 0
+  # end
 
   def show
     @article = Article.find_by_id(params[:id])
     @article_comments = ArticleComment.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @article_comment = ArticleComment.new
     @twitterTitle = @article.title
-    @twitterURL = "http://www.felinesfancy.com/articles/#{@article.id}"
+    @twitterURL = "https://www.felinesfancy.com/articles/#{@article.id}"
     @twitterImage = @article.image
     @twitterDescription = @article.short_description
     @publication_date = "#{@article.created_at.year}-#{@article.created_at.month}-#{@article.created_at.day}"
