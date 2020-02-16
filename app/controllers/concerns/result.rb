@@ -169,6 +169,6 @@ module Result
       e = a0[i] + a1[i] + a2[i] + a3[i] + a4[i] + a5[i]+ a6[i] + a7[i] + a8[i] + a9[i]
       d.push(e)
     end
-  return d
+    return d
   end
 end
