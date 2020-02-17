@@ -25,6 +25,8 @@ require("@rails/actiontext")
 
 import 'css/application'
 import "controllers"
+import 'css/about_me'
 
 const importAll = (r) => r.keys().map(r)
 importAll(require.context('../images/header', false, /\.(png|jpe?g|svg)$/));
+importAll(require.context('../images/catPersonality', false, /\.(png|jpe?g|svg)$/));

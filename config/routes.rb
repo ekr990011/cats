@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create]
   resources :contacts, only: [:new, :create]
   resources :cat_personality_test, only: [:index, :new, :create, :show]
+  resources :about_me, only: [:index]
 
 end
