@@ -26,9 +26,9 @@ production:
   adapter: postgresql
   sslmode: require
   <% unless Rails.application.credentials[:heroku] == nil %>
-    database: <%= Rails.application.credentials[:heroku][:database] %>
-    host: <%= Rails.application.credentials[:heroku][:host] %>
-    port: <%= Rails.application.credentials[:heroku][:port] %>
-    user: <%= Rails.application.credentials[:heroku][:user] %>
-    password: <%= Rails.application.credentials[:heroku][:password] %>
+  database: <%= Rails.application.credentials[:heroku][:database] %>
+  host: <%= Rails.application.credentials[:heroku][:host] %>
+  port: <%= Rails.application.credentials[:heroku][:port] %>
+  user: <%= Rails.application.credentials[:heroku][:user] %>
+  password: <%= Rails.application.credentials[:heroku][:password] %>
   <% end %>
