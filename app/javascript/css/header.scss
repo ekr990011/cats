@@ -11,14 +11,14 @@
   border-bottom: 1px solid #cbcbcb;
   display: flex;
   flex: 1;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: column wrap;
+  margin-left: 50px;
 }
 
 .buttons {
   display: flex;
-  margin-right: auto;
-  margin-left: 50px;
+  flex-flow: row wrap;
+  justify-content: space-around;
 
   a {
     color: black;
@@ -29,6 +29,10 @@
       color: #bb87ff;
     }
   }
+}
+
+.search__feedback {
+  padding: 0 1em;
 }
 
 .feedback {
