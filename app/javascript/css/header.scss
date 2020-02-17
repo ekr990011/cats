@@ -1,8 +1,9 @@
 .header {
+  align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -10,7 +11,8 @@
   border-bottom: 1px solid #cbcbcb;
   display: flex;
   flex: 1;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .buttons {
