@@ -18,17 +18,18 @@ class CatPersonalityTestController < ApplicationController
     #redirect_to new_cat_personality_test_path
     # puts "cat number"
     # puts catNumber
+    catResult  = CatPersonality.find_by(catID: catNumber)
 
-    redirect_to cat_personality_test_path(catNumber)
+    redirect_to cat_personality_test_path(catResult)
     #redirect_to  cat_personality_test_index_path
   end
 
   def show
-    @catPersonality  = CatPersonality.find_by(catID: params[:id])
+    @catPersonality  = CatPersonality.friendly.find(params[:id])
     json_ld(@catPersonality.name + " Personality",
       'media/images/catPersonality/' + @catPersonality.image,
       @catPersonality.created_at, @catPersonality.updated_at,
-      cat_personality_test_path(@catPersonality.catID),
+      cat_personality_test_path(@catPersonality.slug),
       @catPersonality.personality)
   end
 

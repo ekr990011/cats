@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     @article_comments = ArticleComment.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @article_comment = ArticleComment.new
     @twitterTitle = @article.title
-    @twitterURL = "https://www.felinesfancy.com/articles/#{@article.id}"
+    @twitterURL = "https://www.felinesfancy.com/articles/#{@article.slug}"
     @twitterImage = @article.image
     @twitterDescription = @article.short_description
     @publication_date = "#{@article.created_at.year}-#{@article.created_at.month}-#{@article.created_at.day}"
