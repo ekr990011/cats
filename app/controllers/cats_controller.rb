@@ -38,11 +38,13 @@ class CatsController < ApplicationController
   end
 
   def edit
-    @cat = Cat.find_by_id(params[:id])
+    #@cat = Cat.find_by_id(params[:id])
+    @cat = Cat.friendly.find(params[:id])
   end
 
   def update
-    cat = Cat.find_by_id(params[:id])
+    #cat = Cat.find_by_id(params[:id])
+    cat = Cat.friendly.find(params[:id])
     cat.update(cat_params)
     redirect_to cat
   end
@@ -51,7 +53,7 @@ class CatsController < ApplicationController
   private
 
   def cat_params
-    params.require(:cat).permit(:title, :image, :short_description, :article)
+    params.require(:cat).permit(:title, :image, :short_description, :article, :slug)
   end
 
   def js_css
