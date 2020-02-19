@@ -1,8 +1,9 @@
 .header {
+  align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -10,13 +11,14 @@
   border-bottom: 1px solid #cbcbcb;
   display: flex;
   flex: 1;
-  justify-content: flex-end;
+  flex-flow: column wrap;
+  margin-left: 50px;
 }
 
 .buttons {
   display: flex;
-  margin-right: auto;
-  margin-left: 50px;
+  flex-flow: row wrap;
+  justify-content: space-around;
 
   a {
     color: black;
@@ -27,6 +29,11 @@
       color: #bb87ff;
     }
   }
+}
+
+.search__feedback {
+  padding: 0 1em;
+  height: 63.8px;
 }
 
 .feedback {
@@ -72,7 +79,7 @@
     color: black;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 
     &:hover {
       color: #bb87ff;

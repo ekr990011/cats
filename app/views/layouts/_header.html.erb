@@ -1,4 +1,4 @@
-<div class="header">
+<header class="header">
   <div class="logo">
     <%= link_to root_path do %>
       <div class="logo__cat"></div>
@@ -20,6 +20,9 @@
         <%= link_to (about_me_index_path) do %>
           <h4>About Me</h4>
         <% end %>
+        <%= link_to new_contact_path do %>
+          <h4>Feedback & Suggestions</h4>
+        <% end %>
       <% else %>
         <%= link_to( root_path(scroll: "1") ) do %>
           <h4>Articles</h4>
@@ -30,14 +33,16 @@
         <%= link_to (new_cat_personality_test_path) do %>
           <h4>Cat Personality Test</h4>
         <% end %>
+        <%= link_to new_contact_path do %>
+          <h4>Feedback & Suggestions</h4>
+        <% end %>
       <% end %>
     </div>
-    <div class="">
+    <div class="search__feedback">
       <script async src="https://cse.google.com/cse.js?cx=007335270216527451082:dehwz3stake"></script>
       <div class="gcse-search"></div>
     </div>
     <div>
-      <h4 class="feedback"><%= link_to "Feedback & Suggestions", new_contact_path %></h4>
     </div>
   </div>
-</div>
+</header>

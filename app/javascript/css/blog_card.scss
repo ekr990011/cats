@@ -8,6 +8,7 @@
 
 .blog-link {
   text-decoration: none;
+	max-width: 100%;
 }
 
 .cat-link {
@@ -18,7 +19,8 @@
 	display: block;
 	position: relative;
 	// top: 7vw;
-	width: 400px;
+	// width: 400px;
+	width: 22em;
 	height: 250px;
 	margin: auto;
   margin-top: 15px;
