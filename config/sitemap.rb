@@ -29,6 +29,7 @@ SitemapGenerator::Sitemap.create do
   add about_me_index_path, changefreq: :monthly
   add cat_personality_test_index_path, changefreq: :monthly
   add new_cat_personality_test_path, changefreq: :monthly
+  add about_me_index_path, changefreq: :monthly
 
   CatPersonality.find_each do |cat_personality|
     add cat_personality_test_path(cat_personality.catID), lastmod: cat_personality.updated_at, changefreq: :monthly
