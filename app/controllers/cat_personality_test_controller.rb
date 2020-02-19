@@ -25,7 +25,13 @@ class CatPersonalityTestController < ApplicationController
   end
 
   def show
-    @catPersonality  = CatPersonality.friendly.find(params[:id])
+    if params[:id].length < 3
+      @catPersonality = CatPersonality.find_by(catID: params[:id])
+    else
+      @catPersonality  = CatPersonality.friendly.find(params[:id])
+    end
+    # @catPersonality  = CatPersonality.friendly.find(params[:id])
+    # @catPersonality = CatPersonality.find_by(catID: params[:id]) if @catPersonality == nil
     json_ld(@catPersonality.name + " Personality",
       'media/images/catPersonality/' + @catPersonality.image,
       @catPersonality.created_at, @catPersonality.updated_at,
