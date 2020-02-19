@@ -26,7 +26,7 @@ SitemapGenerator::Sitemap.create do
   #   end
 
   add contacts_path, changefreq: :never
-  add about_me_index_path, changefreq: :monthly
+  add cat_personality_test_index_path, changefreq: :monthly
   add cat_personality_test_index_path, changefreq: :monthly
   add new_cat_personality_test_path, changefreq: :monthly
 

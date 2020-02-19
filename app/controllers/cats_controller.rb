@@ -10,7 +10,11 @@ class CatsController < ApplicationController
   end
 
   def show
-    @cat = Cat.find_by_id(params[:id])
+    #@cat = Cat.find_by_id(params[:id])
+    #@cat = Cat.friendly.find_by_id(params[:id])
+    @cat = Cat.friendly.find(params[:id])
+    puts "@cat"
+    puts @cat
     @video_prefix = "https://www.youtube.com/embed/"
     @first_video = Video.where(cat_id: @cat).first
     @videos = Video.where(cat_id: @cat)[1..4]
