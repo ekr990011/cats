@@ -8,11 +8,12 @@ class ArticlesController < ApplicationController
   # end
 
   def show
-    @article = Article.find_by_id(params[:id])
+    #@article = Article.find_by_id(params[:id])
+    @article = Article.friendly.find(params[:id])
     @article_comments = ArticleComment.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @article_comment = ArticleComment.new
     @twitterTitle = @article.title
-    @twitterURL = "https://www.felinesfancy.com/articles/#{@article.id}"
+    @twitterURL = "https://www.felinesfancy.com/articles/#{@article.slug}"
     @twitterImage = @article.image
     @twitterDescription = @article.short_description
     @publication_date = "#{@article.created_at.year}-#{@article.created_at.month}-#{@article.created_at.day}"
@@ -29,11 +30,12 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find_by_id(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 
   def update
-    article = Article.find_by_id(params[:id])
+    #article = Article.find_by_id(params[:id])
+    article = Article.friendly.find(params[:id])
     article.update(article_params)
     redirect_to article
   end
@@ -42,7 +44,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :image, :article_body, :short_description)
+    params.require(:article).permit(:title, :image, :article_body, :short_description, :slug)
   end
 
   def js_css
