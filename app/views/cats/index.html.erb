@@ -2,7 +2,7 @@
   <h2 class="article_header">Articles</h2>
   <div class="index__articles">
     <% @articles.each do |article| %>
-      <a class="blog-link" href="/articles/<%= article.slug %>">
+      <%= link_to article_path(article), class: "blog-link" do %>
         <div class="blog-card">
             <img class="blog-img" src="<%= asset_pack_path article.image %>" />
             <div class="text-overlay">
@@ -14,7 +14,7 @@
 
             </div>
         </div>
-      </a>
+      <% end %>
     <% end %>
   </div>
   <%= will_paginate @articles, class: "digg_pagination" %>
