@@ -38,12 +38,12 @@ SitemapGenerator::Sitemap.create do
     add article_path(article), lastmod: article.updated_at
   end
 
-  Article.find_each do |article|
-    add article_path(article.id), lastmod: article.updated_at
-  end
-
   Cat.find_each do |cat|
     add cat_path(cat), lastmod: cat.updated_at
+  end
+  
+  Article.find_each do |article|
+    add article_path(article.id), lastmod: article.updated_at
   end
 
   Cat.find_each do |cat|
