@@ -10,14 +10,18 @@ class CatsController < ApplicationController
   end
 
   def show
-    @cat = Cat.find_by_id(params[:id])
+    #@cat = Cat.find_by_id(params[:id])
+    #@cat = Cat.friendly.find_by_id(params[:id])
+    @cat = Cat.friendly.find(params[:id])
+    puts "@cat"
+    puts @cat
     @video_prefix = "https://www.youtube.com/embed/"
     @first_video = Video.where(cat_id: @cat).first
     @videos = Video.where(cat_id: @cat)[1..4]
     @cat_comments = CatComment.paginate(page: params[:page], per_page: 5 ).order('created_at DESC')
     @cat_comment = CatComment.new
     @twitterTitle = @cat.title
-    @twitterURL = "https://www.felinesfancy.com/cats/#{@cat.id}"
+    @twitterURL = "https://www.felinesfancy.com/cats/#{@cat.slug}"
     @twitterImage = 'media/images/cats/' + @cat.image
     @twitterDescription = @cat.short_description
     @publication_date = "#{@cat.created_at.year}-#{@cat.created_at.month}-#{@cat.created_at.day}"
@@ -34,11 +38,13 @@ class CatsController < ApplicationController
   end
 
   def edit
-    @cat = Cat.find_by_id(params[:id])
+    #@cat = Cat.find_by_id(params[:id])
+    @cat = Cat.friendly.find(params[:id])
   end
 
   def update
-    cat = Cat.find_by_id(params[:id])
+    #cat = Cat.find_by_id(params[:id])
+    cat = Cat.friendly.find(params[:id])
     cat.update(cat_params)
     redirect_to cat
   end
@@ -47,7 +53,7 @@ class CatsController < ApplicationController
   private
 
   def cat_params
-    params.require(:cat).permit(:title, :image, :short_description, :article)
+    params.require(:cat).permit(:title, :image, :short_description, :article, :slug)
   end
 
   def js_css

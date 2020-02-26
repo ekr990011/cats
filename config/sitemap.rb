@@ -26,12 +26,12 @@ SitemapGenerator::Sitemap.create do
   #   end
 
   add contacts_path, changefreq: :never
-  add about_me_index_path, changefreq: :monthly
   add cat_personality_test_index_path, changefreq: :monthly
   add new_cat_personality_test_path, changefreq: :monthly
+  add about_me_index_path, changefreq: :monthly
 
   CatPersonality.find_each do |cat_personality|
-    add cat_personality_test_path(cat_personality.catID), lastmod: cat_personality.updated_at, changefreq: :monthly
+    add cat_personality_test_path(cat_personality), lastmod: cat_personality.updated_at, changefreq: :monthly
   end
 
   Article.find_each do |article|
@@ -40,5 +40,13 @@ SitemapGenerator::Sitemap.create do
 
   Cat.find_each do |cat|
     add cat_path(cat), lastmod: cat.updated_at
+  end
+  
+  Article.find_each do |article|
+    add article_path(article.id), lastmod: article.updated_at
+  end
+
+  Cat.find_each do |cat|
+    add cat_path(cat.id), lastmod: cat.updated_at
   end
 end
