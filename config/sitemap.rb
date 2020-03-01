@@ -25,7 +25,7 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
-  add contacts_path, changefreq: :never
+  add new_contact_path, changefreq: :never
   add cat_personality_test_index_path, changefreq: :monthly
   add new_cat_personality_test_path, changefreq: :monthly
   add about_me_index_path, changefreq: :monthly
@@ -41,7 +41,7 @@ SitemapGenerator::Sitemap.create do
   Cat.find_each do |cat|
     add cat_path(cat), lastmod: cat.updated_at
   end
-  
+
   Article.find_each do |article|
     add article_path(article.id), lastmod: article.updated_at
   end
