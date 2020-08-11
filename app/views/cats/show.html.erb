@@ -13,11 +13,6 @@
     <div class="article__short_description"><%= @cat.short_description %></div>
   </div>
 
-  <center><h5>Share</h5></center>
-  <ul class="share-buttons">
-    <li class="fb-share-button" data-href="http://www.felinesfancy.com/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.felinesfancy.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></li>
-    <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-  </ul>
   <!-- <center><h5>Tell Us Your Thoughts!</h5></center> -->
 
   <!-- <div class="article__article_header">
@@ -72,6 +67,12 @@
       trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%# @cat.social %>","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=%2Fm%2F0132vv","guestPath":"https://trends.google.com:443/trends/embed/"});
     </script>
   </div> -->
+
+  <center><h5>Share</h5></center>
+  <ul class="share-buttons">
+    <li class="fb-share-button" data-href="http://www.felinesfancy.com/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.felinesfancy.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></li>
+    <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+  </ul>
 
   <div class="article__comment">
     <h5>Tell Us About Your <%= @cat.title.sub(": Facts & Trivia", "") %></h5>
