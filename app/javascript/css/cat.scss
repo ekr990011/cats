@@ -91,7 +91,7 @@
 
 .article__youtube {
   // flex-grow: 0.5;
-  // display: none;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 
