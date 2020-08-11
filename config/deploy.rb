@@ -84,7 +84,8 @@ namespace :deploy do
     end
   end
 
-  after :finishing, 'assets:precompile'
+  # after :finishing, 'assets:precompile'
+  
   # before :starting,     :check_revision
   # after 'deploy:updated', 'assets:precompile'
   # after  :finishing,    :compile_assets
