@@ -25,7 +25,7 @@
 
 .article__article {
   align-self: center;
-  display: none;
+  // display: none;
   background-color: #fff1ff;
   margin-top: 15px;
   // max-width: 32em;
@@ -91,7 +91,7 @@
 
 .article__youtube {
   // flex-grow: 0.5;
-  display: none;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 

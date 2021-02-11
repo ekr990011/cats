@@ -1,5 +1,5 @@
 import 'css/article'
-
+import "trix/dist/trix.css";
 
 const importAll = (r) => r.keys().map(r)
 importAll(require.context('../images/warfare', false, /\.(png|jpe?g|svg)$/));
