@@ -9,9 +9,8 @@ namespace :assets do
 
   task :precompile do
     run_locally do
-      with rails_env: fetch(:rails_env) do
-        execute 'bin/rake assets:precompile'
-        # execute 'gzip -9kvr ./public/'
+      with rails_env: 'production' do
+        execute :bundle, 'exec rake assets:precompile'
       end
     end
 
